@@ -9,7 +9,7 @@ export const portfolioData = {
     profileImage: "/profile.png",
     social: {
       linkedin: "https://www.linkedin.com/in/nisanth-shanmugam-8b5aa0257",
-      github: "https://github.com",
+      github: "https://github.com/nisanth-shanmugam",
       twitter: "https://twitter.com",
       email: "mailto:nisanthshri143@gmail.com"
     }
@@ -25,18 +25,18 @@ export const portfolioData = {
   },
 
   skills: [
-    { name: "Full Stack Development", level: 85, icon: "FaReact", color: "#61dafb" },
-    { name: "Python Development", level: 80, icon: "FaPython", color: "#3572A5" },
+    { name: "JavaScript (ES6+)", level: 85, icon: "FaJs", color: "#f7df1e" },
+    { name: "Python", level: 80, icon: "FaPython", color: "#3572A5" },
     { name: "React.js", level: 85, icon: "FaReact", color: "#61dafb" },
-    { name: "Django", level: 78, icon: "FaReact", color: "#092E20" },
-    { name: "JavaScript", level: 85, icon: "FaJs", color: "#f7df1e" },
-    { name: "HTML & CSS", level: 90, icon: "FaHtml5", color: "#e34f26" },
-    { name: "REST APIs", level: 82, icon: "FaNodeJs", color: "#3c873a" },
-    { name: "CRM Operations", level: 75, icon: "FaBriefcase", color: "#6366f1" },
+    { name: "Django", level: 78, icon: "SiDjango", color: "#092E20" },
+    { name: "HTML5 & CSS3", level: 90, icon: "FaHtml5", color: "#e34f26" },
+    { name: "RESTful APIs", level: 82, icon: "FaNodeJs", color: "#3c873a" },
     { name: "SQL Databases", level: 80, icon: "BsDatabase", color: "#a855f7" },
     { name: "Git & GitHub", level: 85, icon: "FaGitAlt", color: "#f1502f" },
-    { name: "UI/UX Design", level: 78, icon: "FaPalette", color: "#FF6B6B" },
-    { name: "Problem Solving", level: 88, icon: "FaLightbulb", color: "#FFD93D" }
+    { name: "Kotlin & Android", level: 75, icon: "FaAndroid", color: "#3ddc84" },
+    { name: "Tailwind CSS & Bootstrap", level: 82, icon: "FaCss3Alt", color: "#38bdf8" },
+    { name: "Data Structures & Algorithms", level: 80, icon: "FaBrain", color: "#FFD93D" },
+    { name: "UI/UX Design", level: 78, icon: "FaPalette", color: "#FF6B6B" }
   ],
 
   experience: [

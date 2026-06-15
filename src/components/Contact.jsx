@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { FiMail, FiLinkedin, FiGithub, FiSend, FiCheck, FiAlertCircle } from 'react-icons/fi';
 import { portfolioData } from '../data/portfolio';
+import useScrollReveal from '../hooks/useScrollReveal';
 
 const SERVICE_ID  = 'service_jkln9sm';
 const TEMPLATE_ID = 'template_t9jogww';
@@ -11,6 +12,7 @@ export default function Contact() {
   const { email, social } = portfolioData.personal;
   const formRef = useRef();
   const [status, setStatus] = useState('idle'); // idle | sending | success | error
+  const revealRef = useScrollReveal();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,7 +29,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="contact-section" id="contact">
+    <section className="contact-section reveal-up" id="contact" ref={revealRef}>
       <div className="contact-container">
         <h2 className="contact-heading">
           <FiSend className="heading-icon" /> Get In Touch
@@ -58,7 +60,7 @@ export default function Contact() {
               <div className="contact-card-icon github-icon"><FiGithub /></div>
               <div className="contact-card-text">
                 <span className="contact-card-label">GitHub</span>
-                <span className="contact-card-value">github.com</span>
+                <span className="contact-card-value">nisanth-shanmugam</span>
               </div>
             </a>
           </div>
@@ -67,20 +69,32 @@ export default function Contact() {
             <div className="form-row">
               <div className="form-group">
                 <label>Your Name</label>
-                <input name="from_name" type="text" placeholder="John Doe" required />
+                <div className="input-wrapper">
+                  <input name="from_name" type="text" placeholder="John Doe" required />
+                  <span className="input-focus-line"></span>
+                </div>
               </div>
               <div className="form-group">
                 <label>Your Email</label>
-                <input name="from_email" type="email" placeholder="john@example.com" required />
+                <div className="input-wrapper">
+                  <input name="from_email" type="email" placeholder="john@example.com" required />
+                  <span className="input-focus-line"></span>
+                </div>
               </div>
             </div>
             <div className="form-group">
               <label>Subject</label>
-              <input name="subject" type="text" placeholder="Project Inquiry" required />
+              <div className="input-wrapper">
+                <input name="subject" type="text" placeholder="Project Inquiry" required />
+                <span className="input-focus-line"></span>
+              </div>
             </div>
             <div className="form-group">
               <label>Message</label>
-              <textarea name="message" rows="5" placeholder="Tell me about your project..." required />
+              <div className="input-wrapper">
+                <textarea name="message" rows="5" placeholder="Tell me about your project..." required />
+                <span className="input-focus-line"></span>
+              </div>
             </div>
 
             <button type="submit" className="form-submit" disabled={status === 'sending'}>

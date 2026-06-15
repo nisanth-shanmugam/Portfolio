@@ -1,7 +1,7 @@
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaPython, FaGitAlt, FaBriefcase, FaPalette, FaLightbulb } from 'react-icons/fa';
 import { SiDjango } from 'react-icons/si';
 import { BsDatabase } from 'react-icons/bs';
-import { FiArrowRight, FiDownload } from 'react-icons/fi';
+import { FiArrowRight, FiDownload, FiCode, FiDatabase, FiCpu } from 'react-icons/fi';
 import { portfolioData } from '../data/portfolio';
 import profileImg from '../assets/profile.png';
 import resume from '../assets/Nisanth resumee.pdf';
@@ -23,19 +23,22 @@ const techStack = [
 
 export default function Hero() {
   const { name, bio } = portfolioData.personal;
-
+  
   return (
     <section className="hero" id="home">
       <div className="hero-left">
         <span className="hello-wave">👋 Hello, I'm</span>
         <h1 className="hero-title">
-          {name}<br /><span className="highlight">Full Stack Developer</span>
+          {name}<br />
+          <span className="highlight-wrapper">
+            <span className="highlight">Full Stack Developer</span>
+          </span>
         </h1>
         <p className="hero-desc">{bio}</p>
 
         <div className="hero-buttons">
           <a href="#projects" className="btn-primary">
-            View My Work <FiArrowRight />
+            View My Work <FiArrowRight className="arrow-icon" />
           </a>
           <a href={resume} download="Nisanth_Resume.pdf" className="btn-secondary">
             <FiDownload /> Download CV
@@ -61,10 +64,30 @@ export default function Hero() {
 
       <div className="hero-right">
         <div className="profile-container">
+          <div className="profile-orbit-glow"></div>
+          <div className="profile-border-neon"></div>
           <img src={profileImg} alt={name} className="profile-img" />
-          <div className="float-badge top"><span>&lt;/&gt;</span></div>
-          <div className="float-badge middle"><span>&gt;_</span></div>
-          <div className="float-badge bottom"><span>≡</span></div>
+          
+          <div className="float-badge top">
+            <FiCode className="badge-icon" />
+            <div className="badge-text">
+              <span>React & JS</span>
+            </div>
+          </div>
+          
+          <div className="float-badge middle">
+            <FiDatabase className="badge-icon" />
+            <div className="badge-text">
+              <span>Django & SQL</span>
+            </div>
+          </div>
+          
+          <div className="float-badge bottom">
+            <FiCpu className="badge-icon" />
+            <div className="badge-text">
+              <span>Problem Solving</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>

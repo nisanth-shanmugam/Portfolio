@@ -12,7 +12,15 @@ export default function App() {
 
   return (
     <div className="app">
+      {/* Premium Ambient Background Elements */}
+      <div className="ambient-backdrop">
+        <div className="ambient-glow glow-1"></div>
+        <div className="ambient-glow glow-2"></div>
+        <div className="ambient-glow glow-3"></div>
+      </div>
+
       <Navbar activeNav={activeNav} setActiveNav={setActiveNav} />
+      
       <main className="main">
         <Hero />
         <Skills />
